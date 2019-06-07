@@ -1,0 +1,26 @@
+{
+  "name": "formulario-electron",
+  "productName": "Electron  app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron src/index.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docxtemplater": "^3.11.2",
+    "electron-packager": "^13.0.1",
+    "electron-reload": "^1.4.0",
+    "jszip": "^2.6.1",
+    "jszip-utils": "0.0.2"
+  },
+  "devDependencies": {
+    "electron": "^5.0.2"
+  }
+}

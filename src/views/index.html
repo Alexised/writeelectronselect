@@ -1,0 +1,23 @@
+<script type="text/javascript" src="..\index.js"></script>
+<input type="file" id="file-input" />
+<h3>Contenido del archivo:</h3>
+<pre id="contenido-archivo"></pre>
+<script>
+function leerArchivo(e) {
+  var archivo = e.target.files[0];
+  if (!archivo) {
+    return;
+  }
+  var lector = new FileReader();
+  lector.onload = function(e) {
+    var contenido = e.target.result;
+    cambiarContenido(contenido);
+  };
+  lector.readAsText(archivo);
+}
+
+
+
+document.getElementById('file-input')
+  .addEventListener('change', leerArchivo, false);
+  </script>
