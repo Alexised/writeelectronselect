@@ -38,11 +38,6 @@ app.on('ready', () => {
 });
 
 
-
-
-
-
-
 // Menu Template
 const templateMenu = [
   {

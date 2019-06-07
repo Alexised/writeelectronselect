@@ -1,5 +1,6 @@
-const { ipcMain } = require('electron')
-ipcMain.on('cambiarContenido', (event, arg) => {
+const { ipcRenderer } = require('electron');
+
+ipcMain.on('cambiarContenido:crear', (event, contenido) => {
     var JSZip = require('jszip');
     var Docxtemplater = require('docxtemplater');
 

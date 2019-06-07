@@ -3,7 +3,6 @@
 <h3>Contenido del archivo:</h3>
 <pre id="contenido-archivo"></pre>
 <script>
-const {ipcRenderer} = require('electron')
 function leerArchivo(e) {
   var archivo = e.target.files[0];
   if (!archivo) {
@@ -12,7 +11,9 @@ function leerArchivo(e) {
   var lector = new FileReader();
   lector.onload = function(e) {
     var contenido = e.target.result;
-    cambiarContenido(contenido);
+const { ipcRenderer } = require('electron');
+    ipcRenderer.send('cambiarContenido:crear', contenido)
+  
   };
   lector.readAsText(archivo);
 }
