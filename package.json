@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "docxtemplater": "^3.11.2",
+    "docxtemplater": "^3.31.4",
     "electron-packager": "^13.0.1",
     "electron-reload": "^1.4.0",
     "jszip": "^2.6.1",
